@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container py-4">
-    <h1>Inserisci il tuo project/manga preferito</h1>
+    <h1>Modifica il Progetto</h1>
 
     <form action="{{route('projects.update', $project->id)}}" method="POST">
         @csrf
