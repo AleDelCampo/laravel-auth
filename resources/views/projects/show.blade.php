@@ -2,6 +2,8 @@
 
 @section('content')
 
+<body class="show-bg">
+
 <div class="d-flex justify-content-center mt-5">
    
     <div class="pointer">
@@ -12,5 +14,6 @@
     </div>
 
 </div>
-
+    
+</body>
 @endsection

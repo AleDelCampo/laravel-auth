@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+<body class="edit-bg">
+
 <div class="container py-4">
     <h1>Modifica il Progetto</h1>
 
@@ -54,4 +57,5 @@
     </form>
 </div>
 
+</body>
 @endsection

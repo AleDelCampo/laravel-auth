@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
+<body class="welcome-bg">
+    
 <div class="content">
     <div class="container text-center mt-4">
         <h1>WELCOME TO MY PORTFOLIO</h1>
@@ -21,4 +23,5 @@
 
 </div>
 
+</body>
 @endsection

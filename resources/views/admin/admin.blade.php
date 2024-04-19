@@ -2,6 +2,8 @@
 
 @section('content')
 
+<body class="admin-bg">
+
 <div class="container text-center mt-4">
     <h1>
         Pagina Super Segreta Admin
@@ -35,4 +37,5 @@
     <a href="{{ route('dashboard') }}" class="btn btn-primary">Vai alla DashBoard</a>
 </div>
 
+</body>
 @endsection

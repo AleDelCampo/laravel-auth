@@ -2,6 +2,8 @@
 
 @section('content')
 
+<body class="create-bg">
+
 <div class="container py-4">
     <h1>Inserisci un Progetto</h1>
 
@@ -53,4 +55,5 @@
     </form>
 </div>
 
+</body>
 @endsection
