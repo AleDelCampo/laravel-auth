@@ -19,7 +19,7 @@
             <p>{{ $project->description }}</p>
             <img class="img-size" src="{{ $project->image }}" alt="{{ $project->image }}">
             <p>Tecnologia: {{ $project->technology }}</p>
-            <div>
+            <div class="d-flex justify-content-center gap-4">
                 <a href="{{ route('projects.edit', ['project' => $project->id]) }}" class="btn btn-primary">Modifica</a>
                 <form action="{{ route('projects.destroy', ['project' => $project->id]) }}" method="POST">
                     @csrf

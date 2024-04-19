@@ -22,7 +22,20 @@ class StoreProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|max:100',
+            'description' => 'required|max:8000',
+            'image' => 'nullable',
+            'technology' => 'nullable',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'title.required' => 'Inserisci Titolo!!',
+            'title.max' => "Puoi usare al massimo :max caratteri",
+            'description.required' => 'Facci capire almeno cosa sia!!',
+            'description.max' => "Puoi usare al massimo :max caratteri",
         ];
     }
 }
