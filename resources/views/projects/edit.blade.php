@@ -32,9 +32,9 @@
             @enderror
         </div>
 
-        <div class="mb-2">
-            <img src="{{ asset('storage/' . $project->image) }}" alt="">
+        <div class="mb-2 bg-black">
             <label for="image" class="form-label">Anteprima: </label>
+            <img class="img-size" src="{{ asset('storage/' . $project->image) }}" alt="">
             <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
             @error('image')
             <div class="invalid-feedback">
