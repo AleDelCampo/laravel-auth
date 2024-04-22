@@ -5,6 +5,7 @@ use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProjectRequest;
+use Illuminate\Support\Facades\Storage;
 
 class AdminProjectController extends Controller
 {
@@ -34,6 +35,13 @@ class AdminProjectController extends Controller
         $request->validated();
 
         $newProject = new Project();
+
+        if($request->hasFile('image')) {
+
+            $path = Storage::disk('public')->put('project_images', $request->image);
+
+            $newProject->image = $path;
+        }
 
         $newProject->fill($request->all());
 

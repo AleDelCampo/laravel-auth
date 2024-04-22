@@ -9,7 +9,9 @@
     <div class="pointer">
         <h2>{{ $project->title }}</h2>
         <p>{{ $project->description }}</p>
-        <img class="img-size" src="{{ $project->image }}" alt="{{ $project->image }}">
+        <div class="mb-2">
+            <img class="img-size" src="{{ asset('storage/' . $project->image) }}" alt="Copertina immagine">
+        </div>
         <p>Tecnologia: {{ $project->technology }}</p>
     </div>
 

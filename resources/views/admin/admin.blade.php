@@ -19,9 +19,11 @@
         <div class="pointer">
             <h2>{{ $project->title }}</h2>
             <p>{{ $project->description }}</p>
-            <img class="img-size" src="{{ $project->image }}" alt="{{ $project->image }}">
+            <div class="mb-2">
+                <img class="img-size" src="{{ asset('storage/' . $project->image) }}" alt="Copertina immagine">
+            </div>
             <p>Tecnologia: {{ $project->technology }}</p>
-            <div class="d-flex justify-content-center gap-4">
+            <div class="d-flex justify-content-center gap-4">   
                 <a href="{{ route('projects.edit', ['project' => $project->id]) }}" class="btn btn-primary">Modifica</a>
                 <form action="{{ route('projects.destroy', ['project' => $project->id]) }}" method="POST">
                     @csrf

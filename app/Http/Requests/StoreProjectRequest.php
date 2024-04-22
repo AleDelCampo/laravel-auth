@@ -24,7 +24,7 @@ class StoreProjectRequest extends FormRequest
         return [
             'title' => 'required|max:100',
             'description' => 'required|max:8000',
-            'image' => 'nullable',
+            'image' => 'file|max:1024|nullable|mimes:jpg,png',
             'technology' => 'nullable',
         ];
     }
@@ -36,6 +36,8 @@ class StoreProjectRequest extends FormRequest
             'title.max' => "Puoi usare al massimo :max caratteri",
             'description.required' => 'Facci capire almeno cosa sia!!',
             'description.max' => "Puoi usare al massimo :max caratteri",
+            'image.mimes' => "Inserisci un immagine",
+            'image.max' => "Peso limite 1024 KB"
         ];
     }
 }

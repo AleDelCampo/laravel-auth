@@ -7,7 +7,7 @@
 <div class="container py-4">
     <h1>Inserisci un Progetto</h1>
 
-    <form action="{{route('projects.store')}}" method="POST">
+    <form action="{{route('projects.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-2">
@@ -32,7 +32,7 @@
 
         <div class="mb-2">
             <label for="image" class="form-label">Anteprima: </label>
-            <input type="text" class="form-control @error('image') is-invalid @enderror" id="image" name="image" value="{{ old('image') }}">
+            <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
             @error('image')
             <div class="invalid-feedback">
               {{$message}}
@@ -44,7 +44,7 @@
             <label for="technology" class="form-label">Tecnologie Utilizzate: </label>
             <input type="text" class="form-control @error('technology') is-invalid @enderror" id="technology" name="technology" value="{{ old('technology') }}">
             @error('technology')
-            <div class="invalid-feedback">
+            <div class="invalid-feedback">  
               {{$message}}
             </div>
             @enderror

@@ -33,8 +33,9 @@
         </div>
 
         <div class="mb-2">
+            <img src="{{ asset('storage/' . $project->image) }}" alt="">
             <label for="image" class="form-label">Anteprima: </label>
-            <input type="text" class="form-control @error('image') is-invalid @enderror" id="image" value="{{ old('image') ?? $project->image }}" name="image">
+            <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
             @error('image')
             <div class="invalid-feedback">
               {{$message}}
