@@ -13,6 +13,8 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
+        //Momentaneamente il Seeder è puramente inutile, perchè stiamo mano a mano integrando la creazione solamente da DashBoard arrivando sempre
+        //più vicini al reale e corretto utilizzo del Portfolio.
         Project::create([
             'title' => 'Boolzapp',
             'description' => 'WebApp di messaggistica',

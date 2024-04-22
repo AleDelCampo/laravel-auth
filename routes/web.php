@@ -16,9 +16,14 @@ use App\Http\Controllers\Admin\AdminProjectController;
 |
 */
 
+//Quando si visita /dashboard tramite una richiesta GET, verrà restituita la vista di DashBoard.
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+//Rotte protette dall'auth che gestiscono previa iscrizione e login,
+//Visualizzazione, modifiche e eliminazioni.
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -34,6 +39,8 @@ require __DIR__.'/auth.php';
 Route::get('/', [ProjectController::class, 'index']);
 
 Route::get('/admin', [AdminProjectController::class, 'index'])->middleware(['auth'])->name('admin');
+
+//Rotta accessibile a tutti per la sola Visualizzazione.
 
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 

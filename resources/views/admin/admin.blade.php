@@ -19,6 +19,9 @@
         <div class="pointer">
             <h2>{{ $project->title }}</h2>
             <p>{{ $project->description }}</p>
+
+            {{-- Questo è il metodo utilizzato per l'assegnazione dell'immagine attraverso l'inserimento tramite il nostro server (momentaneamente cartelle del PC) --}}
+
             <div class="mb-2">
                 <img class="img-size" src="{{ asset('storage/' . $project->image) }}" alt="Copertina immagine">
             </div>

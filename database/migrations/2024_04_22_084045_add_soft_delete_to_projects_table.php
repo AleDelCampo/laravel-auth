@@ -9,6 +9,9 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
+    //Migrazione occorrente per l'implentazione del SoftDelete.
+
     public function up(): void
     {
         Schema::table('projects', function (Blueprint $table) {

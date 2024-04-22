@@ -19,7 +19,9 @@ class StoreProjectRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
+    
+    //Qui ci serviamo della Request per la Validazione avanzata.
+     public function rules(): array
     {
         return [
             'title' => 'required|max:100',

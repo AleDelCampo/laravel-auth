@@ -9,6 +9,9 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
+    //Le Migration sono la base della popolazione del nostro database.
+
     public function up(): void
     {
         Schema::create('projects', function (Blueprint $table) {

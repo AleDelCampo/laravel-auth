@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProjectRequest;
 use Illuminate\Support\Facades\Storage;
 
+//Il nostro Admin Controller differisce momentaneamente dal ProjectController creato inizialmente, perchè è corretto che sia l'admin a poter
+//gestire il tutto, tramite auth sulla rotta admin.
+
 class AdminProjectController extends Controller
 {
     /**
